@@ -3,6 +3,7 @@ import CardDeck from '../components/CardDeck';
 import SearchBox from '../components/SearchBox'
 import './App.css'
 import Scroll from '../components/Scroll'
+import ErrorBoundary from './components/ErrorBoundary'
 
 class app extends Component{
 	constructor() {
@@ -35,8 +36,10 @@ this.setState({Searchfield: event.target.value})
 				<h1 className='f1'>Robofriends</h1>
 			
 				<SearchBox searchChange={this.onSearchChange}/>
-					<Scroll>
+				<Scroll>
+					<ErrorBoundary>
 				<CardDeck robots={filteredRobot}/>
+					</ErrorBoundary>
 				</Scroll>
 				</div>
 		);
