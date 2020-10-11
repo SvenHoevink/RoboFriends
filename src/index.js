@@ -2,14 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import Card from './Card.js';
 import './Card.css';
-import robots from './Robots.js';
-import CardDeck from './CardDeck';
+import App from './App'
 
 ReactDOM.render(
 	<React.StrictMode>
-		<CardDeck />
+		<App />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
