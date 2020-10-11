@@ -1,6 +1,5 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import Card from './Card';
-import tachyons from 'tachyons'
 
 const CardDeck = ({robots}) =>{
 		return (
