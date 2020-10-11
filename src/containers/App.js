@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import CardDeck from './CardDeck';
-import SearchBox from './SearchBox'
+import CardDeck from '../components/CardDeck';
+import SearchBox from '../components/SearchBox'
 import './App.css'
-import Scroll from './Scroll'
+import Scroll from '../components/Scroll'
 
 class app extends Component{
 	constructor() {
@@ -23,10 +23,11 @@ this.setState({Searchfield: event.target.value})
 	}
 
 	render(){
-		const filteredRobot = this.state.robots.filter(robots => { return robots.name.toLowerCase().includes(this.state.Searchfield.toLowerCase());
+		const {robots, Searchfield} = this.state;
+		const filteredRobot = robots.filter(robot => { return robot.name.toLowerCase().includes(Searchfield.toLowerCase());
 		})
 
-		if (this.state.robots.length === 0) {
+		if (robots.length === 0) {
 			return <h1>Loading</h1>
 		} else {
 			return (
