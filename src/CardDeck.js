@@ -5,11 +5,13 @@ import tachyons from 'tachyons'
 const CardDeck = ({robots}) =>{
 		return (
 			<Fragment className='tc'>
+				<div>
 				{robots.map((value, i) => {
 					return(
 						<Card id={robots[i].id} name={robots[i].name} email={robots[i].email} />
 					)
 				})}
+				</div>
 			</Fragment>
 		);
 };
